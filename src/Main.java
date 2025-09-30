@@ -78,10 +78,10 @@ public class Main {
             }
         }
 // задание 7
-        int one = 1;
-        int two = 2;
-        int three = 3;
-        if (one <= two && one <= three) {
+        int one = 10;
+        int two = 20;
+        int three = 1;
+        if (one <= two || one <= three) {
             if (two <= three){
                 System.out.println(three + " Большее число");
             }
