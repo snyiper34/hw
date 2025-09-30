@@ -8,8 +8,8 @@ public class Main {
         if (age >= 18) {
             System.out.println("Возраст человека равен " + age + " он совершеннолетний");
         }
-        if (age1 <= 18) {
-            System.out.println("Возраст человека равен " + age1 + " он не достиг совершеннолетия, нужно немного подождать");
+        else {
+                System.out.println("Возраст человека равен " + age1 + " он не достиг совершеннолетия, нужно немного подождать");
         }
 // задание 2
         int temp = 10;
@@ -17,7 +17,7 @@ public class Main {
         if (temp >= 5) {
             System.out.println("На улице " + temp + "  градусов, можно идти без шапки");
         }
-        if (temp1 <= 5) {
+        else  {
             System.out.println("На улице " + temp1 + " градусов, нужно надеть шапку");
         }
 // задание 3
@@ -26,7 +26,7 @@ public class Main {
         if (speed >= 60) {
             System.out.println("Cкорость " + speed + " придется заплатить штраф");
         }
-        if (speed1 <= 60) {
+        else  {
             System.out.println("Cкорость " + speed1 + " можно ездить спокойно");
         }
 // задание 4
@@ -37,13 +37,12 @@ public class Main {
         if (ageAge >= 2 && ageAge <= 6) {
             System.out.println("Возраст человека равен " + ageAge + " ему нужно ходить в детский сад");
         }
-        if (ageAge1 >= 7 && ageAge1 <= 17) {
+        else if (ageAge1 >= 7 && ageAge1 <= 17) {
             System.out.println("Возраст человека равен " + ageAge1 + " ему нужно ходить в школу");
         }
-        if (ageAge2 >= 18 && ageAge2 <= 24) {
-            System.out.println("Возраст человека равен " + ageAge2 + " его место в университете");
-        }
-        if (ageAge3 >= 24) {
+        else if (ageAge2 >= 18 && ageAge2 <= 24) {
+            System.out.println("Возраст человека равен " + ageAge2 + " его место в университете");}
+        else {
             System.out.println("Возраст человека равен " + ageAge3 + " ему пора ходить на работу");
         }
 // задание 5
@@ -53,44 +52,36 @@ public class Main {
         if (ageAttraction <= 5) {
             System.out.println("Возраст ребенка равен " + ageAttraction + " он не может кататься на аттракционе");
         }
-        if (ageAttraction1 >= 5 && ageAttraction1 <= 14) {
-            System.out.println("Возраст ребенка равен " + ageAttraction1 + " он может кататься только в сопровождении взрослого. Если взрослого нет, то кататься нельзя");
-        }
-        if (ageAttraction2 >= 14) {
+        else if (ageAttraction1 >= 5 && ageAttraction1 <= 14) {
+            System.out.println("Возраст ребенка равен " + ageAttraction1 + " он может кататься только в сопровождении взрослого. Если взрослого нет, то кататься нельзя"); }
+        else {
             System.out.println("Возраст ребенка равен " + ageAttraction2 + " он может кататься без сопровождения взрослого");
         }
 // задание 6
         int vagon = 102;
         int sit = 60;
         int stand = (vagon - sit);
-        int sit1 = 50;
-        int stand1 = 38;
-        int total = sit1 + stand1;
-        if (total <= vagon) {
-            if (sit1 <= sit) {
-                System.out.println("Есть сидячие места");
-            }
-            else if (stand1 <= stand) {
-                System.out.println("Есть стоячие места");
-            }
-        else {
-            System.out.println("Вагон полностью забит");
-            }
+
+        if (sit + stand >= vagon) {
+            System.out.println("Вагон уже полностью забит");
         }
-// задание 7
-        int one = 10;
-        int two = 20;
-        int three = 1;
-        if (one <= two || one <= three) {
-            if (two <= three){
-                System.out.println(three + " Большее число");
-            }
-            else if (two >= three)  {
-                System.out.println(two + " Большее число");
-            }
+        else if (sit < vagon) {
+            System.out.println("Есть сидячие места");
+        }
         else {
+            System.out.println("Есть только стоячие места");
+        }
+
+// задание 7
+        int one = 1;
+        int two = 2;
+        int three = 3;
+        if (one >= two && one >= three) {
             System.out.println(one + " Большее число");
-            }
+        } else if (two >= one && two >= three) {
+            System.out.println(two + " Большее число");
+        } else {
+            System.out.println(three + " Большее число");
         }
 
 
