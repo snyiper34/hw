@@ -78,9 +78,11 @@ public class Main {
         int three = 3;
         if (one >= two && one >= three) {
             System.out.println(one + " Большее число");
-        } else if (two >= one && two >= three) {
+        }
+        else if (two >= three) {
             System.out.println(two + " Большее число");
-        } else {
+        }
+        else {
             System.out.println(three + " Большее число");
         }
 
