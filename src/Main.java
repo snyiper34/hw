@@ -61,25 +61,25 @@ public class Main {
         int vagon = 102;
         int sit = 60;
         int stand = (vagon - sit);
-
-        if (sit + stand >= vagon) {
-            System.out.println("Вагон уже полностью забит");
+        int passengers = 59;
+        if (passengers < sit) {
+            System.out.println("Сидячих мест нет");
         }
-        else if (sit < vagon) {
-            System.out.println("Есть сидячие места");
+        else if (passengers < sit && passengers > stand) {
+            System.out.println("Стоячих мест нет");
         }
         else {
-            System.out.println("Есть только стоячие места");
+            System.out.println("Вагон уже полностью забит");
         }
 
 // задание 7
         int one = 1;
         int two = 2;
         int three = 3;
-        if (one >= two && one >= three) {
+        if (one > two && one > three) {
             System.out.println(one + " Большее число");
         }
-        else if (two >= three) {
+        else if (two > three && two > one) {
             System.out.println(two + " Большее число");
         }
         else {
