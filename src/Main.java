@@ -71,6 +71,19 @@ public class Main {
         else {
             System.out.println("Вагон уже полностью забит");
         }
+        /* исправленный но по другому согласно по заданию а не по комментарию
+int vagon = 102;
+int sit = 60;
+int stand = (vagon - sit);
+int passengers = 67;
+
+if (passengers < sit) {
+    System.out.println("Есть сидячие места");
+} else if (passengers < vagon) {
+    System.out.println("Сидячих мест нет, но есть стоячие");
+} else {
+    System.out.println("Вагон уже полностью забит");
+}*/
 
 // задание 7
         int one = 1;
