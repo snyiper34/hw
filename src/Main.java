@@ -62,10 +62,10 @@ public class Main {
         int sit = 60;
         int stand = (vagon - sit);
         int passengers = 59;
-        if (passengers < sit) {
+        if (passengers <= sit) {
             System.out.println("Сидячих мест нет");
         }
-        else if (passengers < sit && passengers > stand) {
+        else if (passengers <= sit && passengers >= stand) {
             System.out.println("Стоячих мест нет");
         }
         else {
