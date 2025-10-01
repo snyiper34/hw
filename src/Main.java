@@ -65,7 +65,7 @@ public class Main {
         if (passengers >= sit) {
             System.out.println("Сидячих мест нет");
         }
-        else if (passengers >= sit || passengers <= vagon) {
+        else if (passengers >= sit && passengers <= vagon) {
             System.out.println("Есть стоячие места");
         }
         else {
