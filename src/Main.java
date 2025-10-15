@@ -52,6 +52,5 @@ public class Main {
        int result = 2 * i;
        System.out.println("2*" + i + "=" + result);
    }
-
     }
 }
