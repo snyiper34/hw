@@ -3,54 +3,102 @@
 public class Main {
     public static void main(String[] args) {
         System.out.println("Задание 1");
-   for (int i = 1; i <= 10; i++){
-       System.out.println("Число " + i);
-   }
-        System.out.println("Заднаие 2");
-   for (int i = 10; i >= 1; i--){
-       System.out.println("Число " + i);
-   }
+        int firstFriday = 7;
+        for (int i = firstFriday; i <= 31; i = i + 7){
+            firstFriday = i;
+            if ((i - firstFriday) % 7 == 0){
+                System.out.println("Сегодня пятница, " +firstFriday+ "е число");
+            }
+        }
+        System.out.println("Задание 2");
+        int distanceMarafon = 0;
+        int endMarafon = 42_195;
+        int notificationInternal = 500;
+        do { int remainingDistance = endMarafon - distanceMarafon;
+            System.out.println("Держитесь! Осталось " + remainingDistance + " метров");
+            distanceMarafon += notificationInternal;
+        }
+        while (distanceMarafon <= endMarafon );
+        System.out.println("Финиш! Поздавляем с завершением марафона");
+
+        System.out.println("Марофон начался! Всего дистанция: "+ endMarafon + " м");
+        for(int remainingDistance = endMarafon; remainingDistance >= 0; remainingDistance -= notificationInternal){
+            System.out.println("Держитесь! Осталось " + remainingDistance + " метров");
+        }
+        System.out.println("Финиш! Поздавляем с завершением марафона");
         System.out.println("Задание 3");
-   for (int i = 0; i <= 17; i = i + 2){
-       System.out.println("Число " + i);
-   }
+        int ostatokSummaUser = 1000;
+        int today = 0;
+        int remainingOstatok = ostatokSummaUser;
+        int dailyCost = 100;
+        while (remainingOstatok >= dailyCost) {
+            today++;
+            if (today % 5 == 0) {
+                System.out.println("День " + today + " бесплатный (осталось " + remainingOstatok + " руб)");
+                continue;
+            }
+            remainingOstatok -= dailyCost;
+            System.out.println("День " + today + " списание " + dailyCost + " руб (осталось " + remainingOstatok + " руб)");
+        }
+            System.out.println("Результат: Бюджета " + ostatokSummaUser + " руб хватит на " + today + " дней");
+            System.out.println("Остаток бюджета: " + remainingOstatok + " руб");
+
+        for (int day = 1; remainingOstatok >= dailyCost; day++) {
+            today = day;
+
+            if (day % 5 == 0) {
+                System.out.println("День " + day + ":  бесплатный (осталось " + remainingOstatok + " руб)");
+                continue;
+            }
+            remainingOstatok -= dailyCost;
+            System.out.println("День " + day + " Спиание " + dailyCost + " руб (осталось " + remainingOstatok + " руб)");
+        }
+
+        System.out.println("Результат: Бюджета " + ostatokSummaUser + " руб хватит на " + today + " дней");
+        System.out.println("Остаток бюджета: " + remainingOstatok + " руб");
         System.out.println("Задание 4");
-   for (int i = 10; i >= (-10); i--){
-       System.out.println("Число " + i);
-   }
+        int mouth = 0;
+        double total = 0;
+        int nacoplenie = 12_000_000;
+        int vlozenie = 15_000;
+        double procent = 0.07;
+        while (true) {
+                mouth++;
+        total += vlozenie;
+        if (mouth % 6 == 0) {
+            total += total * procent;
+        }
+        if (total >= nacoplenie) {
+            break;
+
+        }
+            System.out.printf("Месяц: %d, Накоплено: %.2f%n", mouth, total);
+        }
+        System.out.printf("Цель достигнута за %d месяцев%n", mouth);
+        System.out.printf("Итоговая сумма: %.2f%n", total);
         System.out.println("Задание 5");
-   for (int i = 1904; i <= 2096; i = i + 4){
-       System.out.println(i + " год является високосным");
-   }
-        System.out.println("Задание 6");
-   for (int i = 7; i <= 98; i = i + 7){
-       System.out.println("Число " + i);
-   }
-        System.out.println("Задание 7");
-   for (int i = 1; i <= 512; i = i * 2){
-       System.out.println("Число " + i);
-   }
-        System.out.println("Задание 8");
-   int mothSave = 29000;
-   int totalSave = 0;
-   for (int moth = 1; moth <= 12; moth++){
-       totalSave += mothSave;
-       System.out.println("Месяц " + moth + ", сумма накоплений равна " + totalSave + " рублей");
-   }
-        System.out.println("Задание 9");
-   int mothSave1 = 29000;
-   double totalSave1 = 0;
-   double mothRate = 0.12 / 12;
-   for (int moth = 1; moth <= 12; moth++) {
-       totalSave1 += mothSave1;
-       double mothproc = totalSave1 * mothRate;
-       totalSave1 += mothproc;
-       System.out.println("Месяц " + moth + ", сумма накоплений равна " + totalSave1 + " рублей");
-   }
-        System.out.println("Задание 10");
-   for (int i = 1; i <= 10; i++){
-       int result = 2 * i;
-       System.out.println("2*" + i + "=" + result);
-   }
+        int charge = 20;
+        int minute = 0;
+        int overheats = 0;
+        int chargeMinute = 2;
+        while (charge < 100 && overheats < 3){
+            minute++;
+            if (minute % 10 == 0){
+                overheats++;
+                System.out.println("Перегрев");
+                continue;
+            }
+            charge += chargeMinute;
+            if (charge >= 100) {
+                System.out.println("Зарядка завершена");
+                break;
+            }
+            if (overheats == 3){
+                System.out.println("Досрочное завершение из-за перегревов");
+                break;
+            }
+        }
+        System.out.println("Время зарядки составило " + minute + " минут");
+        System.out.println("Текущий заряд: " + charge + "%");
     }
 }
