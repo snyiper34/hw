@@ -7,7 +7,7 @@ public class Main {
         for (int i = firstFriday; i <= 31; i = i + 7){
             firstFriday = i;
             if ((i - firstFriday) % 7 == 0){
-                System.out.println("Сегодня пятница, " +firstFriday+ "е число");
+                System.out.println("Сегодня пятница, " +firstFriday+ "е число. Необходимо подготовить отчет");
             }
         }
         System.out.println("Задание 2");
