@@ -4,25 +4,25 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Задание 1");
         int firstFriday = 7;
-        for (int i = firstFriday; i <= 31; i = i + 7){
+        for (int i = firstFriday; i <= 31; i = i + 7) {
             firstFriday = i;
-            if ((i - firstFriday) % 7 == 0){
-                System.out.println("Сегодня пятница, " +firstFriday+ "е число. Необходимо подготовить отчет");
-            }
+            System.out.println("Сегодня пятница, " + firstFriday + "е число. Необходимо подготовить отчет");
+
         }
         System.out.println("Задание 2");
         int distanceMarafon = 0;
         int endMarafon = 42_195;
         int notificationInternal = 500;
-        do { int remainingDistance = endMarafon - distanceMarafon;
+        do {
+            int remainingDistance = endMarafon - distanceMarafon;
             System.out.println("Держитесь! Осталось " + remainingDistance + " метров");
             distanceMarafon += notificationInternal;
         }
-        while (distanceMarafon <= endMarafon );
+        while (distanceMarafon <= endMarafon);
         System.out.println("Финиш! Поздавляем с завершением марафона");
 
-        System.out.println("Марофон начался! Всего дистанция: "+ endMarafon + " м");
-        for(int remainingDistance = endMarafon; remainingDistance >= 0; remainingDistance -= notificationInternal){
+        System.out.println("Марофон начался! Всего дистанция: " + endMarafon + " м");
+        for (int remainingDistance = endMarafon; remainingDistance >= 0; remainingDistance -= notificationInternal) {
             System.out.println("Держитесь! Осталось " + remainingDistance + " метров");
         }
         System.out.println("Финиш! Поздавляем с завершением марафона");
@@ -40,8 +40,8 @@ public class Main {
             remainingOstatok -= dailyCost;
             System.out.println("День " + today + " списание " + dailyCost + " руб (осталось " + remainingOstatok + " руб)");
         }
-            System.out.println("Результат: Бюджета " + ostatokSummaUser + " руб хватит на " + today + " дней");
-            System.out.println("Остаток бюджета: " + remainingOstatok + " руб");
+        System.out.println("Результат: Бюджета " + ostatokSummaUser + " руб хватит на " + today + " дней");
+        System.out.println("Остаток бюджета: " + remainingOstatok + " руб");
 
         for (int day = 1; remainingOstatok >= dailyCost; day++) {
             today = day;
@@ -63,15 +63,15 @@ public class Main {
         int vlozenie = 15_000;
         double procent = 0.07;
         while (true) {
-                mouth++;
-        total += vlozenie;
-        if (mouth % 6 == 0) {
-            total += total * procent;
-        }
-        if (total >= nacoplenie) {
-            break;
+            mouth++;
+            total += vlozenie;
+            if (mouth % 6 == 0) {
+                total += total * procent;
+            }
+            if (total >= nacoplenie) {
+                break;
 
-        }
+            }
             System.out.printf("Месяц: %d, Накоплено: %.2f%n", mouth, total);
         }
         System.out.printf("Цель достигнута за %d месяцев%n", mouth);
@@ -81,20 +81,20 @@ public class Main {
         int minute = 0;
         int overheats = 0;
         int chargeMinute = 2;
-        while (charge < 100 && overheats < 3){
+        while (charge < 100 && overheats < 3) {
             minute++;
-            if (minute % 10 == 0){
+            if (minute % 10 == 0) {
                 overheats++;
                 System.out.println("Перегрев");
+                if (overheats == 3) {
+                    System.out.println("Досрочное завершение из-за перегревов");
+                    break;
+                }
                 continue;
             }
             charge += chargeMinute;
             if (charge >= 100) {
                 System.out.println("Зарядка завершена");
-                break;
-            }
-            if (overheats == 3){
-                System.out.println("Досрочное завершение из-за перегревов");
                 break;
             }
         }
