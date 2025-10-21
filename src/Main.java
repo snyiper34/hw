@@ -2,103 +2,29 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Задание 1");
-        int firstFriday = 7;
-        for (int i = firstFriday; i <= 31; i = i + 7) {
-            firstFriday = i;
-            System.out.println("Сегодня пятница, " + firstFriday + "е число. Необходимо подготовить отчет");
+        System.out.println("Задание 1, 2, 3");
+        int [] celieNumbers = new int [3];
+        celieNumbers [0] = 1;
+        celieNumbers [1] = 2;
+        celieNumbers [2] = 3;
+        System.out.println(celieNumbers[0] + " , " + celieNumbers[1] + " , " + celieNumbers[2]);
+        System.out.println(celieNumbers[2] + " , " + celieNumbers[1] + " , " + celieNumbers[0]);
 
-        }
-        System.out.println("Задание 2");
-        int distanceMarafon = 0;
-        int endMarafon = 42_195;
-        int notificationInternal = 500;
-        do {
-            int remainingDistance = endMarafon - distanceMarafon;
-            System.out.println("Держитесь! Осталось " + remainingDistance + " метров");
-            distanceMarafon += notificationInternal;
-        }
-        while (distanceMarafon <= endMarafon);
-        System.out.println("Финиш! Поздавляем с завершением марафона");
+        double [] drob = new double[]{1.57, 7.654, 9.986};
+        System.out.println(drob[0] + " , " + drob[1] + " , " + drob[2]);
+        System.out.println(drob[2] + " , " + drob[1] + " , " + drob[0]);
 
-        System.out.println("Марофон начался! Всего дистанция: " + endMarafon + " м");
-        for (int remainingDistance = endMarafon; remainingDistance >= 0; remainingDistance -= notificationInternal) {
-            System.out.println("Держитесь! Осталось " + remainingDistance + " метров");
-        }
-        System.out.println("Финиш! Поздавляем с завершением марафона");
-        System.out.println("Задание 3");
-        int ostatokSummaUser = 1000;
-        int today = 0;
-        int remainingOstatok = ostatokSummaUser;
-        int dailyCost = 100;
-        while (remainingOstatok >= dailyCost) {
-            today++;
-            if (today % 5 == 0) {
-                System.out.println("День " + today + " бесплатный (осталось " + remainingOstatok + " руб)");
-                continue;
-            }
-            remainingOstatok -= dailyCost;
-            System.out.println("День " + today + " списание " + dailyCost + " руб (осталось " + remainingOstatok + " руб)");
-        }
-        System.out.println("Результат: Бюджета " + ostatokSummaUser + " руб хватит на " + today + " дней");
-        System.out.println("Остаток бюджета: " + remainingOstatok + " руб");
+        char [] simvols = new char[]{'*' , '%' , '$' , '@'};
+        System.out.println(simvols[0] + " , " + simvols[1] + " , " + simvols[2] + " , " + simvols[3]);
+        System.out.println(simvols[3] + " , " + simvols[2] + " , " + simvols[1] + " , " + simvols[0]);
 
-        for (int day = 1; remainingOstatok >= dailyCost; day++) {
-            today = day;
-
-            if (day % 5 == 0) {
-                System.out.println("День " + day + ":  бесплатный (осталось " + remainingOstatok + " руб)");
-                continue;
-            }
-            remainingOstatok -= dailyCost;
-            System.out.println("День " + day + " Спиание " + dailyCost + " руб (осталось " + remainingOstatok + " руб)");
-        }
-
-        System.out.println("Результат: Бюджета " + ostatokSummaUser + " руб хватит на " + today + " дней");
-        System.out.println("Остаток бюджета: " + remainingOstatok + " руб");
         System.out.println("Задание 4");
-        int mouth = 0;
-        double total = 0;
-        int nacoplenie = 12_000_000;
-        int vlozenie = 15_000;
-        double procent = 0.07;
-        while (true) {
-            mouth++;
-            total += vlozenie;
-            if (mouth % 6 == 0) {
-                total += total * procent;
+        for (int i = 0; i < celieNumbers.length; i++) {
+            if (celieNumbers[i] % 2 != 0) {
+                celieNumbers[i] += 1;
             }
-            if (total >= nacoplenie) {
-                break;
+        }
+        System.out.println("Убраны нечетные числа: " + celieNumbers[0] + " , " + celieNumbers[1] + " , " + celieNumbers[2]);
 
-            }
-            System.out.printf("Месяц: %d, Накоплено: %.2f%n", mouth, total);
-        }
-        System.out.printf("Цель достигнута за %d месяцев%n", mouth);
-        System.out.printf("Итоговая сумма: %.2f%n", total);
-        System.out.println("Задание 5");
-        int charge = 20;
-        int minute = 0;
-        int overheats = 0;
-        int chargeMinute = 2;
-        while (charge < 100 && overheats < 3) {
-            minute++;
-            if (minute % 10 == 0) {
-                overheats++;
-                System.out.println("Перегрев");
-                if (overheats == 3) {
-                    System.out.println("Досрочное завершение из-за перегревов");
-                    break;
-                }
-                continue;
-            }
-            charge += chargeMinute;
-            if (charge >= 100) {
-                System.out.println("Зарядка завершена");
-                break;
-            }
-        }
-        System.out.println("Время зарядки составило " + minute + " минут");
-        System.out.println("Текущий заряд: " + charge + "%");
     }
 }
