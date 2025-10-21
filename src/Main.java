@@ -1,5 +1,4 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Задание 1, 2, 3");
@@ -7,16 +6,34 @@ public class Main {
         celieNumbers [0] = 1;
         celieNumbers [1] = 2;
         celieNumbers [2] = 3;
-        System.out.println(celieNumbers[0] + " , " + celieNumbers[1] + " , " + celieNumbers[2]);
-        System.out.println(celieNumbers[2] + " , " + celieNumbers[1] + " , " + celieNumbers[0]);
+        String arrayNumbers = Arrays.toString(celieNumbers);
+        System.out.println(arrayNumbers);
+        for (int i = 0; i < celieNumbers.length / 2; i++) {
+            int znacenie = celieNumbers[i];
+            celieNumbers[i] = celieNumbers[celieNumbers.length - 1 - i];
+            celieNumbers[celieNumbers.length - 1 - i] = znacenie;
+        }
+        System.out.println(Arrays.toString(celieNumbers));
 
         double [] drob = new double[]{1.57, 7.654, 9.986};
-        System.out.println(drob[0] + " , " + drob[1] + " , " + drob[2]);
-        System.out.println(drob[2] + " , " + drob[1] + " , " + drob[0]);
+        String arrayDrob = Arrays.toString(drob);
+        System.out.println(arrayDrob);
+        for (int i = 0; i < drob.length / 2; i++) {
+            double znacenie = drob[i];
+            drob[i] = drob[drob.length - 1 - i];
+            drob[drob.length - 1 - i] = znacenie;
+        }
+        System.out.println(Arrays.toString(drob));
 
         char [] simvols = new char[]{'*' , '%' , '$' , '@'};
-        System.out.println(simvols[0] + " , " + simvols[1] + " , " + simvols[2] + " , " + simvols[3]);
-        System.out.println(simvols[3] + " , " + simvols[2] + " , " + simvols[1] + " , " + simvols[0]);
+        String arraySimvols = Arrays.toString(simvols);
+        System.out.println(arraySimvols);
+        for (int i = 0; i < simvols.length / 2; i++) {
+            char znacenie = simvols[i];
+            simvols[i] = simvols[simvols.length - 1 - i];
+            simvols[simvols.length - 1 - i] = znacenie;
+        }
+        System.out.println(Arrays.toString(simvols));
 
         System.out.println("Задание 4");
         for (int i = 0; i < celieNumbers.length; i++) {
