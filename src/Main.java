@@ -9,8 +9,10 @@ public class Main {
         int min = inputArray1[0];
         for (int pay : inputArray1) {
             summa += pay;
-            if (pay > max) max = pay;
-            if (pay < min) min = pay;
+            if (pay > max){
+                max = pay;}
+            if (pay < min){
+                min = pay;}
         }
         double averrage = (double) summa / inputArray1.length;
         outputArray1[0] = summa;
@@ -71,16 +73,11 @@ public class Main {
         System.out.println("Задание 5");
 
         int [] inputArray5 = {9873, -3956, 9785, -1352, 6543};
-        int numbers = 0;
+        int[] outArray5 = new int[1];
+        int mouth = 1;
         for (int profit : inputArray5){
-            if (profit > 0) numbers++;
-        }
-        int [] outArray5 = new int[numbers];
-        int indexFor5 = 0;
-        for (int profit : inputArray5){
-            if (profit > 0) {
-                outArray5[indexFor5] = profit;
-                indexFor5++;
+            if (profit < 0) {
+                outArray5[0] += mouth;
             }
         }
         System.out.println("inputArray5: " + Arrays.toString(inputArray5));
