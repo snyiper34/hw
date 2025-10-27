@@ -70,7 +70,7 @@ public class Main {
         System.out.println("outArray4: " + Arrays.toString(outArray4));
         System.out.println();
 
-        System.out.println("Задание 5");
+        System.out.println("Задание 5 ");
 
         int [] inputArray5 = {9873, -3956, 9785, -1352, 6543};
         int[] outArray5 = new int[1];
